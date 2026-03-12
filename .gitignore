@@ -55,6 +55,5 @@ data_cache.pkl
 temp_combined.csv
 test_image.jpg
 
-# Local image cache
-images/
-public/images/
+# Local ML image cache (root level only, NOT public/images)
+/images/
