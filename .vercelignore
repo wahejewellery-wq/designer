@@ -11,8 +11,8 @@ __pycache__/
 *.csv
 *.txt
 
-# Local images folder (not served via Next.js public/)
-images/
+# Root-level ML images folder only (NOT public/images/ which is needed by Next.js)
+/images/
 
 # Logs & temp files
 logs_*.txt
