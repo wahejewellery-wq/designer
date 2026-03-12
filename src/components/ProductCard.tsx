@@ -38,7 +38,9 @@ export default function ProductCard({ item, index }: ProductCardProps) {
                     {item.shape} • {item.carat} • {item.goldColor}
                 </p>
                 <div className="text-lg font-serif text-charcoal mb-6">
-                    ₹{item.price.toLocaleString("en-IN")}
+                    {typeof item.price === "number"
+                        ? `₹${item.price.toLocaleString("en-IN")}`
+                        : item.price}
                 </div>
 
                 <a
