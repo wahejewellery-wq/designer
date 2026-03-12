@@ -39,3 +39,22 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Python & ML artifacts
+.venv/
+__pycache__/
+*.py
+*.ipynb
+*.pkl
+*.pth
+
+# Data & logs
+*.csv
+*.txt
+data_cache.pkl
+temp_combined.csv
+test_image.jpg
+
+# Local image cache
+images/
+public/images/

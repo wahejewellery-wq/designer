@@ -1,0 +1,21 @@
+# Python environment
+.venv/
+__pycache__/
+*.py
+*.ipynb
+
+# Large ML model files
+*.pkl
+
+# Data files
+*.csv
+*.txt
+
+# Local images folder (not served via Next.js public/)
+images/
+
+# Logs & temp files
+logs_*.txt
+temp_combined.csv
+test_image.jpg
+data_cache.pkl

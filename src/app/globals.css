@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
+@theme {
+  --color-beige: #EDD2BC;
+  --color-beige-light: #FDFaf8;
+  --color-brown: #733004;
+  --color-brown-light: #A65A1F;
+  --color-charcoal: #1A1A1A;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1A1A1A;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  body {
+    @apply bg-white text-charcoal font-sans antialiased;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif tracking-tight;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.luxury-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #FAFAFA 100%);
+}
+
+.brown-text {
+  @apply text-brown;
+}
+
+.beige-button {
+  @apply bg-beige text-charcoal px-8 py-3 rounded-full tracking-widest uppercase text-xs font-semibold hover:bg-brown hover:text-white transition-colors duration-300 cursor-pointer;
+}
+
+.outline-brown-button {
+  @apply border border-brown text-brown px-8 py-3 rounded-full tracking-widest uppercase text-xs font-semibold hover:bg-brown hover:text-white transition-all duration-300 cursor-pointer;
 }
